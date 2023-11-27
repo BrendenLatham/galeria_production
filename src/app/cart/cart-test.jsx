@@ -61,7 +61,7 @@ export const CartItem = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/orders', {
+      const response = await fetch('https://whale-app-wjkbw.ondigitalocean.app/orders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
