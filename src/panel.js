@@ -9,7 +9,7 @@ function AdminPanel() {
   const [unfilledOrders, setUnfilledOrders] = useState([]);
 
   useEffect(() => {
-    const apiUrl = "http://localhost:5000/unfilled"; // Check this URL
+    const apiUrl = "https://whale-app-wjkbw.ondigitalocean.app/unfilled"; // Check this URL
     console.log("API URL:", apiUrl);
 
     axios

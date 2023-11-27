@@ -5,9 +5,15 @@ const MongoClient = require('mongodb').MongoClient;
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 const app = express();
-const port = 5000;
 
-const mongoURI = 'mongodb+srv://Galeria:Uu0dxoceIGwf3qA1@galeria.hdzdkkc.mongodb.net/?retryWrites=true&w=majority';
+// guard with your life
+const port = process.env.PORT || 5000;
+const mongoURI = process.env.MONGODB_URI;
+
+if (!mongoURI) {
+  console.error('Missing environment variable: MONGODB_URI');
+  process.exit(1); // Stop the application if the MongoDB URI is not set
+}
 
 app.use(express.json());
 app.use(cors());
@@ -155,5 +161,5 @@ app.get('/orders/:username', async (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../build', '../public/index.html'));
 });
