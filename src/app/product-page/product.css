@@ -1,0 +1,66 @@
+.product-page1 {
+  background-color: rgb(193, 192, 192);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.product-image1 {
+  color: #fff;
+  transform: translate(-30%, -0%);
+  top: 10%;
+  display: flex;
+  justify-content: flex-end;
+  position:absolute;
+  width: 30%;
+  height: 50%;
+  border-radius: 2px;
+  /*border: 2px solid black;*/
+  background-position: center;
+  left: 20%;
+  ;
+}
+
+.product-information{
+  top: 5%;
+  left: 45%;
+  /*border: 2px solid black;*/
+  position: absolute;
+  max-width: 50%;
+    transform: translate(0%, 0%);
+    padding: 20px;
+}
+
+.product-information-text{
+  font-style: italic;
+}
+
+.product_title{
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.artist_name{
+  font-size: 30px;
+}
+
+.productbox{
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px #888888;
+}
+
+.cart-btnn{
+    position: relative;
+    margin-top: 5px;
+    color: #fff;
+    background-color: #2a2a2a;
+    transition: background-color 0.3s;
+    box-shadow: 1px 1px 6px #888888;
+    border: 1px solid black;
+    border-radius: 5px;
+}
