@@ -1,5 +1,6 @@
 // src/server.js
 const express = require('express');
+const path = require('path');
 const MongoClient = require('mongodb').MongoClient;
 const cors = require('cors');
 const bcrypt = require('bcrypt');
@@ -10,6 +11,8 @@ const mongoURI = 'mongodb+srv://Galeria:Uu0dxoceIGwf3qA1@galeria.hdzdkkc.mongodb
 
 app.use(express.json());
 app.use(cors());
+
+app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/', (req, res) => {
   res.send('server online');
@@ -149,4 +152,8 @@ app.get('/orders/:username', async (req, res) => {
   } catch (error) {
     res.status(500).send('Error fetching orders');
   }
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
