@@ -12,7 +12,7 @@ const AccountPage = () => {
     if (user) {
       const fetchOrders = async () => {
         try {
-          const response = await axios.get(`https://whale-app-wjkbw.ondigitalocean.app/${user.username}`);
+          const response = await axios.get(`https://whale-app-wjkbw.ondigitalocean.app/orders/${user.username}`);
           console.log('Orders fetched:', response.data);
           setOrders(response.data);
         } catch (error) {
