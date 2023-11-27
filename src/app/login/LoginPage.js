@@ -27,7 +27,7 @@ function LoginPage() {
     const userData = isLogin ? { username, password } : { username, email, password };
   
     try {
-      const response = await axios.post(`http://whale-app-wjkbw.ondigitalocean.app:5000${endpoint}`, userData);
+      const response = await axios.post(`https://whale-app-wjkbw.ondigitalocean.app${endpoint}`, userData);
       console.log("Response", response);
   
       // Ensure the server message is present
