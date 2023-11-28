@@ -30,7 +30,7 @@ function AdminPanel() {
           <li key={order._id} className="order-item">
             <div className="order-info">
               <h3>Order ID: {order._id}</h3>
-              <p className="order-text">Customer: {order.customerName}</p>
+              <p className="order-text">Customer: {order.username}</p>
               <ul className="order-list">
                 {order.items.map((item, index) => (
                   <li key={index} className="order-item">
