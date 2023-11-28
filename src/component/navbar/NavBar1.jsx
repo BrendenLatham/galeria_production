@@ -60,9 +60,9 @@ const NavBar1 = () => {
       data-bs-theme="dark"
       style={{ position: 'fixed', width: '100%', zIndex: '1' }}>
         <div className="container-fluid" style={{ height: "80px" }}>
-        <a className="navbar-brand" onClick={() => navigate("/")}>
+        <div className="navbar-brand" onClick={() => navigate("/")}>
             <h1>Galeria</h1>
-          </a>
+          </div>
           <button
             className="navbar-toggler"
             type="button"
