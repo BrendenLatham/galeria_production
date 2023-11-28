@@ -75,23 +75,6 @@ const NavBar1 = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item dropdown" ref={pagesDropdownRef}>
-                <button
-                  className="btn btn-secondary dropdown-toggle pages-dropdown"
-                  type="button"
-                  onClick={() => setShowPagesDropdown(!showPagesDropdown)}
-                >
-                  <i className="fa fa-home" aria-hidden="true"></i>
-                  &nbsp;Pages
-                </button>
-                <ul className={`dropdown-menu ${showPagesDropdown ? "show" : ""}`}>
-                  <li><button className="dropdown-item" onClick={() => handleNavigate('/')}>Home</button></li>
-                  <li><button className="dropdown-item" onClick={() => handleNavigate('/artist')}>Artist</button></li>
-                  <li><button className="dropdown-item" onClick={() => handleNavigate('/art')}>Art</button></li>
-                </ul>
-              </li>
-            </ul>
             <div className="mx-auto search-box">
               <form className="d-flex" role="search" onSubmit={handleSearch}>
                 <input
@@ -115,9 +98,9 @@ const NavBar1 = () => {
                   <i className="fa fa-user-circle" aria-hidden="true"></i>
                 </button>
                 <ul className={`dropdown-menu dropdown-style ${showMoreDropdown ? "show" : ""}`} aria-labelledby="navbarDropdownMoreLink">
-                  <li><button className="dropdown-item" onClick={() => user ? handleNavigate(`/AccountPage/${user.username}`) : handleNavigate('/LoginPage')}>{user ? "Account" : "Log In"}</button></li>
+                  <li><button className="dropdown-item" onClick={() => user ? handleNavigate('/AccountPage') : handleNavigate('/LoginPage')}>{user ? "Account" : "Log In"}</button></li>
                   <li><button className="dropdown-item" onClick={() => handleNavigate('/saved')}>Saved for later</button></li>
-                  <li><button className="dropdown-item" onClick={() => handleNavigate('/Info')}>Info</button></li>
+                  <li><button className="dropdown-item" onClick={() => handleNavigate('/info')}>Info</button></li>
                 </ul>
               </li>
               <li className="nav-item">
@@ -135,5 +118,7 @@ const NavBar1 = () => {
 };
 
 export default NavBar1;
+
+
 
 

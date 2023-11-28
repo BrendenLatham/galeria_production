@@ -56,7 +56,7 @@ export const CartItem = () => {
     const order = {
       items: cartItems,
       total: calculateTotal(),
-      username: user.username,
+      username: user ? user.username : "Guest",
       // Add any other information you need for the order
     };
 

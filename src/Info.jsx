@@ -42,10 +42,10 @@ function Info() {
       <h1>Frequently Asked Questions</h1>
       <ul>
         {faqData.map((item, index) => (
-          <li key={index}>
+          <ul key={index}>
             <h3>{item.question}</h3>
             <p>{item.answer}</p>
-          </li>
+          </ul>
         ))}
       </ul>
       <br></br>
@@ -75,7 +75,7 @@ const infoStyle = {
   padding: '15px',
   textAlign: 'center',
   fontSize: '20px',
-  height: '100vh',
+  height: '150vh',
 
 };
 
