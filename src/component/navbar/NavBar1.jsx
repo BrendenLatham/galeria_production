@@ -98,7 +98,7 @@ const NavBar1 = () => {
                   <i className="fa fa-user-circle" aria-hidden="true"></i>
                 </button>
                 <ul className={`dropdown-menu dropdown-style ${showMoreDropdown ? "show" : ""}`} aria-labelledby="navbarDropdownMoreLink">
-                  <li><button className="dropdown-item" onClick={() => user ? handleNavigate('/AccountPage') : handleNavigate('/LoginPage')}>{user ? "Account" : "Log In"}</button></li>
+                  <li><button className="dropdown-item" onClick={() => user ? handleNavigate(`/AccountPage/:${user.username}`) : handleNavigate('/LoginPage')}>{user ? "Account" : "Log In"}</button></li>
                   <li><button className="dropdown-item" onClick={() => handleNavigate('/saved')}>Saved for later</button></li>
                   <li><button className="dropdown-item" onClick={() => handleNavigate('/info')}>Info</button></li>
                 </ul>
