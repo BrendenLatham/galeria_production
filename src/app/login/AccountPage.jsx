@@ -26,7 +26,7 @@ const AccountPage = () => {
 
   return (
     <div className="account-orders-container">
-      <h2>Your Unfilled Orders</h2>
+      <h2>Your Past Orders</h2>
       <ul className="order-list">
         {orders.map((order) => (
           <li key={order._id} className="order-item">
